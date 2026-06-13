@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -312,7 +312,7 @@
                 <div>
                     <span class="status-pill">
                         <span class="status-dot"></span>
-                        Enterprise Core Engine: Operations Nominal
+                        Networking Core Engineer: system Operations engineer
                     </span>
                 </div>
             </div>
