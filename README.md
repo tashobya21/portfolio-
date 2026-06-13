@@ -1,1 +1,349 @@
 # portfolio-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tashobya Isaac | Network Engineer Portfolio</title>
+    <style>
+        /* CSS VARIABLE PALETTE (Premium Executive / Navy & Gold) */
+        :root {
+            --background: #F4F6F9;       /* Soft White/Light Grey - Clean background */
+            --surface: #FFFFFF;          /* Pure White - Content modules */
+            --primary: #0A192F;          /* Deep Navy - Headings, major structure */
+            --secondary: #D4AF37;        /* Rich Gold - Professional accents, highlights */
+            --accent-teal: #008080;      /* Muted Teal - Interactive states, tags */
+            --text-main: #2C3E50;        /* Dark Slate - Crisp, highly readable body text */
+            --text-muted: #5A6B7C;       /* Soft Slate - Subtitles, secondary info */
+            --border-color: #E2E8F0;    /* Clean subtle dividers */
+        }
+
+        /* GLOBAL STYLES */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* PREMIUM HERO HEADER */
+        header {
+            background-color: var(--primary);
+            color: #FFFFFF;
+            padding: 80px 40px;
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(10, 25, 47, 0.1);
+            margin-bottom: 40px;
+            border-bottom: 4px solid var(--secondary);
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            color: #FFFFFF;
+        }
+
+        .header-content .subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .header-content .institution {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* LIVE STATUS INDICATOR */
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #FFFFFF;
+            margin-top: 20px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #2ECC71;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 8px #2ECC71;
+        }
+
+        /* MODULAR LAYOUT GRID */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 7fr 4fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .layout-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* EXECUTIVE CARD STYLES */
+        .profile-card {
+            background: var(--surface);
+            border-radius: 8px;
+            padding: 35px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--background);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            text-align: justify;
+        }
+
+        /* PROFESSIONAL COMPETENCY TAGS */
+        .tags-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background: var(--background);
+            color: var(--primary);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .badge:hover {
+            border-color: var(--accent-teal);
+            color: var(--accent-teal);
+            transform: translateY(-1px);
+        }
+
+        .badge-alt {
+            background: #FFFDF3;
+            color: #B7950B;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* NETWORKING CHANNELS (CONTACTS) */
+        .network-channels {
+            list-style: none;
+        }
+
+        .channel-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--background);
+        }
+
+        .channel-row:last-child {
+            border-bottom: none;
+        }
+
+        .channel-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .channel-action a {
+            color: var(--accent-teal);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .channel-action a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        /* SIMULATED METRIC INFRASTRUCTURE */
+        .infra-widget {
+            background: #F8FAFC;
+            border: 1px dashed var(--border-color);
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .metric-line {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            font-family: monospace;
+        }
+
+        .metric-line:last-child {
+            margin-bottom: 0;
+        }
+
+        /* PROFESSIONAL FOOTER */
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <div class="header-content">
+                <h1>Tashobya Isaac</h1>
+                <div class="subtitle">Aspiring Networking Specialist & System Architect</div>
+                <div class="institution">Uganda Christian University</div>
+                
+                <div>
+                    <span class="status-pill">
+                        <span class="status-dot"></span>
+                        Enterprise Core Engine: Operations Nominal
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <div class="layout-grid">
+            
+            <main>
+                <section class="profile-card">
+                    <h2>About Me</h2>
+                    <p>I am an aspiring Networking Specialist and currently a student at Uganda Christian University. My academic and professional focus is centered on building strong expertise in computer networking, with a long-term goal of becoming a highly skilled and industry-ready network engineer.</p>
+                    
+                    <p>My interest in technology extends beyond networking alone. I have developed skills in artificial intelligence, data analysis, cybersecurity, and systems design. I also have experience working with engineering tools such as SolidWorks, which has strengthened my understanding of technical modeling and system visualization.</p>
+                    
+                    <p>Beyond my technical background, I am also actively involved in sports. This has helped me build discipline, focus, and resilience—qualities that translate strongly into my academic and technical growth.</p>
+                </section>
+
+                <section class="profile-card">
+                    <h2>Future Direction</h2>
+                    <p>Looking ahead, I am actively working on developing additional projects in the fields of networking, cybersecurity, and intelligent systems. My goal is to contribute to innovative solutions that improve digital access, connectivity, and skill development opportunities for students and young professionals.</p>
+                    
+                    <p>I am particularly interested in building systems that combine networking infrastructure with emerging technologies such as automation and artificial intelligence to solve real-world problems.</p>
+                    
+                    <p>My journey in technology is driven by curiosity, continuous learning, and a strong desire to build impactful solutions. I am committed to growing as a networking professional while contributing meaningfully to projects that support digital transformation and youth empowerment.</p>
+                </section>
+            </main>
+
+            <aside>
+                <div class="profile-card">
+                    <h2>Technical Matrix</h2>
+                    <div class="tags-wrapper">
+                        <span class="badge">Networking</span>
+                        <span class="badge">Cybersecurity</span>
+                        <span class="badge">Artificial Intelligence</span>
+                        <span class="badge">Data Analysis</span>
+                        <span class="badge">Systems Design</span>
+                        <span class="badge">SolidWorks</span>
+                        <span class="badge badge-alt">Athletic Discipline</span>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <h2>System Telemetry</h2>
+                    <div class="infra-widget">
+                        <div class="metric-line">
+                            <span style="color: var(--text-muted);">Session Routing:</span>
+                            <span style="color: var(--accent-teal); font-weight: bold;">OSPF_Active</span>
+                        </div>
+                        <div class="metric-line">
+                            <span style="color: var(--text-muted);">Automation Layer:</span>
+                            <span style="color: var(--accent-teal); font-weight: bold;">Enabled</span>
+                        </div>
+                        <div class="metric-line">
+                            <span style="color: var(--text-muted);">Security Policy:</span>
+                            <span style="color: #2ECC71; font-weight: bold;">Hardened</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <h2>Professional Gateways</h2>
+                    <ul class="network-channels">
+                        <li class="channel-row">
+                            <span class="channel-title">Corporate Email</span>
+                            <span class="channel-action">
+                                <a href="mailto:isaactash2@gmail.com">isaactash2@gmail.com</a>
+                            </span>
+                        </li>
+                        <li class="channel-row">
+                            <span class="channel-title">LinkedIn Node</span>
+                            <span class="channel-action">
+                                <a href="https://ug.linkedin.com/in/tashobya-isaac-097579358" target="_blank">tashobya-isaac</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Tashobya Isaac &bull; Uganda Christian University Portfolio Matrix</p>
+            <p style="font-size: 0.8rem; margin-top: 5px; opacity: 0.7;">Engineered for scalability, innovation, and digital transformation.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
