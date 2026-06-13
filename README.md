@@ -383,15 +383,15 @@
                             <span style="color: var(--accent-teal); font-weight: bold;">OSPF_Active</span>
                         </div>
                         <div class="metric-line">
-                            <span style="color: var(--text-muted);">Automation Layer:</span>
+                            <span style="color: var(--text-muted);">Server systems :</span>
                             <span style="color: var(--accent-teal); font-weight: bold;">Enabled</span>
                         </div>
                         <div class="metric-line">
-                            <span style="color: var(--text-muted);">Security Policy:</span>
+                            <span style="color: var(--text-muted);">System operatons:</span>
                             <span style="color: #2ECC71; font-weight: bold;">Hardened</span>
                         </div>
                         <div class="metric-line">
-                            <span style="color: var(--text-muted);">Node Status:</span>
+                            <span style="color: var(--text-muted);">Networking:</span>
                             <span style="color: var(--primary); font-weight: bold;">UCU-STU_NODE</span>
                         </div>
                     </div>
