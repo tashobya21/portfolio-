@@ -319,7 +319,7 @@
 
             <div class="profile-image-container">
                 <div class="profile-frame">
-                    <img src="WhatsApp Image 2026-06-13 at 17.07.36.jpeg" alt="Tashobya Isaac Profile Picture">
+                    <img src="profile.jpeg" alt="Tashobya Isaac Profile Picture">
                 </div>
             </div>
         </header>
